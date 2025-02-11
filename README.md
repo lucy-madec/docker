@@ -63,3 +63,20 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 * Pour que la commande fonctionne, il faut remplacer ```xxxx``` par un moyen d'accéder au container. En mettant ```8088```, on arrive sur la page _Welcome to Docker_ grâce au lien : ```localhost:8088```.
 
 ![docker images](images/13.welcome_to_docker.png)
+
+### 🛑 Arrêter le container
+
+```docker stop <idconteneur>```
+
+### 🗑️ Supprimer le container
+
+```docker rm <nomconteneur>```
+
+## 🗑️ Différentes actions de supprimer :
+* **Un conteneur spécifique :** ```docker stop <idconteneur>```
+* **Plusieurs conteneurs :** ```docker rm <id_conteneur_1> <id_conteneur_2> <id_conteneur_3>```
+* **Tous les conteneurs arrêtés :** ```docker rm $(docker ps -a -q)```
+* **Forcer la suppression d'un conteneur actif :** ```docker rm -f $(docker ps -aq)```
+* **Une image spécifique :** ```docker rmi <nomimage>```
+* **Toutes les images inutilisées :** ```docker image prune -a```
+* **Forcer la suppression d'une image :** ```docker image prune -a -f```
