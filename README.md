@@ -11,7 +11,7 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 ![dover version](images/1.docker_version.png)
 
 ### Test des commandes de base dans le terminal :
-* ````docker info```
+* ```docker info```
 
 ![docker info](images/2.%20docker_info.png)
 
