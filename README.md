@@ -11,7 +11,7 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 
 ![docker version](images/1.docker_version.png)
 
-### ⌨️Test des commandes de base dans le terminal :
+### ⌨️ Test des commandes de base dans le terminal :
 * ```docker info```
 
 ![docker info](images/2.docker_info.png)
@@ -24,18 +24,28 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 
 ![docker images](images/4.docker_images.png)
 
-* ```docker run``` qui est une <span style="color: red;">erreur</span> ❌
+* ```docker run``` ❌ Cette commande seule est incorrecte, car il manque le nom de l'image à exécuter.
 
 ![docker run](images/5.docker_run_erreur.png)
 
-* ```docker run -d <nomimage>``` qui est la bonne commande pour créer un conteneur avec l’image dedans ✔️
+* ```docker run -d <nomimage>``` ✔️ Cette commande permet de créer et d'exécuter un conteneur à partir d'une image.
 
-![docker run -d nominage](images/6.docker_run.png)
+![docker run -d nomimage](images/6.docker_run.png)
 
-* ```docker stop``` qui est une <span style="color: red;">erreur</span> ❌
+* ```docker stop``` ❌ Cette commande seule est incorrecte, car il manque l'ID ou le nom du conteneur à arrêter.
 
 ![docker stop](images/7.docker_stop_erreur.png)
 
-* ```docker stop <idconteneur>``` qui est la bonne commande pour arrêter Docker ✔️
+* ```docker stop <idconteneur>``` ✔️ Cette commande permet d'arrêter un conteneur en précisant son ID ou son nom.
 
 ![docker stop idconteneur](images/8.docker_stop.png)
+
+### 📥 Récupération de l'image Docker
+
+* ```docker pull``` ❌ Cette commande seule est incorrecte, car il manque le nom de l'image à récupérer.
+
+![docker pull](images/9.docker_pull_erreur.png)
+
+* ```docker pull <nomimage>``` ✔️ Cette commande permet de télécharger une image depuis Docker Hub.
+
+![docker pull nomimage](images/10.docker_pull.png)
