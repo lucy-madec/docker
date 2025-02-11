@@ -1,2 +1,2 @@
 <!-- Titre -->
-# [center]Exercices Docker[/center] 
+# Exercices Docker
