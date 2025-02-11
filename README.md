@@ -7,20 +7,20 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 
 <!-- Exercices -->
 ## 🔄️ Vérification de la version de Docker avec  
-```docker --version```
+```docker --version``` 
 
 ![docker version](images/1.docker_version.png)
 
 ### ⌨️ Test des commandes de base dans le terminal :
-* ```docker info```
+* ```docker info```: Affiche toutes les infos du cluster.
 
 ![docker info](images/2.docker_info.png)
 
-* ```docker ps```
+* ```docker ps```: Affiche les conteneurs actifs.
 
 ![docker ps](images/3.docker_ps.png)
 
-* ```docker images```
+* ```docker images```: Affiche toutes les images avec leurs propriétés.
 
 ![docker images](images/4.docker_images.png)
 
@@ -49,3 +49,17 @@ Ce projet a pour objectif l'apprentissage des commandes de base de Docker à tra
 * ```docker pull <nomimage>``` ✔️ Cette commande permet de télécharger une image depuis Docker Hub.
 
 ![docker pull nomimage](images/10.docker_pull.png)
+
+* ```docker images```
+
+![docker images](images/11.docker_images.png)
+
+### 🏗️ Construction du container Docker
+
+* ```docker run -it --rm -p xxxx:80 “nom de l’image”```
+
+![docker images](images/12.construction_container.png)
+
+* Pour que la commande fonctionne, il faut remplacer ```xxxx``` par un moyen d'accéder au container. En mettant ```8088```, on arrive sur la page _Welcome to Docker_ grâce au lien : ```localhost:8088```.
+
+![docker images](images/13.welcome_to_docker.png)
