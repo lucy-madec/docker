@@ -1,0 +1,7 @@
+version: '3'
+services:
+  supermario:
+    image: pengbai/docker-supermario
+    ports:
+      - "8600:8080"
+    container_name: supermario
