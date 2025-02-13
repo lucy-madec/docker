@@ -1,9 +1,6 @@
 # Utilisation d'une image PHP avec Apache
 FROM php:apache
 
-# Activation de PHP pour le serveur Apache
-RUN docker-php-ext-install json
-
 # Copier tous les fichiers dans le conteneur
 COPY . /var/www/html/
 
