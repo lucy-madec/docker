@@ -80,12 +80,26 @@
         const cells = document.querySelectorAll('td');
 
         async function saveResults(winner) {
-            const response = await fetch('/save.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ winner }),
-            });
-            return response.ok;
+            console.log('Sauvegarde du gagnant:', winner);
+            try {
+                const data = { winner };
+                console.log('Données à envoyer:', data);
+                
+                const response = await fetch('/save.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+                
+                console.log('Statut de la réponse:', response.status);
+                const responseData = await response.json();
+                console.log('Réponse du serveur:', responseData);
+                
+                return response.ok;
+            } catch (error) {
+                console.error('Erreur lors de la sauvegarde:', error);
+                return false;
+            }
         }
 
         function makeMove(cell) {
@@ -97,12 +111,14 @@
             if (checkWin()) {
                 statusDisplay.textContent = `Le joueur ${currentPlayer} a gagné !`;
                 gameActive = false;
+                console.log('Victoire du joueur:', currentPlayer);
                 saveResults(currentPlayer);
                 return;
             }
 
             if (Array.from(cells).every(cell => cell.textContent !== '')) {
                 statusDisplay.textContent = "C'est un match nul !";
+                console.log('Match nul');
                 saveResults('Draw');
                 gameActive = false;
                 return;
