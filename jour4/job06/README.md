@@ -38,6 +38,20 @@ job06/
 - Port: 8081
 - Interface web pour la gestion de la base de données
 
+## Test de Connectivité 🔌
+
+### 1. Interface de Connexion Adminer
+![Interface de connexion Adminer](images/1.adminer-login.png)
+*Page de connexion à l'interface d'administration de la base de données*
+
+### 2. Connexion Réussie à Adminer
+![Connexion réussie à Adminer](images/2.adminer-connected.png)
+*Vue de la base de données après connexion réussie*
+
+### 3. Logs de Connexion Backend
+![Logs de connexion backend](images/3.backend-connected.png)
+*Logs montrant la connexion réussie du backend à la base de données*
+
 ## Réseau
 Tous les services sont connectés via un réseau Docker bridge personnalisé pour assurer une communication sécurisée entre les conteneurs.
 
@@ -47,3 +61,8 @@ Tous les services sont connectés via un réseau Docker bridge personnalisé pou
 - Création de la structure du projet
 - Configuration du docker-compose.yml
 - Mise en place des réseaux et volumes
+
+### 2. Test de Connectivité ✅
+- Connexion réussie entre le backend et la base de données
+- Accès à l'interface Adminer fonctionnel
+- Communication établie entre tous les services

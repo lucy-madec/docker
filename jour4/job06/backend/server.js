@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 
 // Configuration de la base de données
 const dbConfig = {
-    host: process.env.DB_HOST || 'mysql_container',
+    host: process.env.DB_HOST || 'database',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || 'root',
     database: process.env.DB_NAME || 'projetdb',
